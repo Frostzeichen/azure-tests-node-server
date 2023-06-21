@@ -7,9 +7,7 @@ const port = process.env.PORT || 3000
 const app = express()
 
 // Configure routes
-app.get("/", (req, res) => {
-    return res.sendFile(__dirname + "/public/index.html")
-})
+app.use(express.static("public"))
 
 
 // Start server
