@@ -8,8 +8,9 @@ const app = express()
 
 // Configure routes
 app.get("/", (req, res) => {
-    return res.send("Hello world! Good thing this thing's working.")
+    return res.sendFile(__dirname + "/public/index.html")
 })
+
 
 // Start server
 app.listen(port, () => {
